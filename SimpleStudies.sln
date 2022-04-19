@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStudies", "SimpleStudies\SimpleStudies.csproj", "{8D4A4E09-FB09-425F-A230-19A417638AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStudies.Data", "SimpleStudies.Data\SimpleStudies.Data.csproj", "{321308BC-C8C2-4E6A-8448-0A2C89B4713B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D4A4E09-FB09-425F-A230-19A417638AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4A4E09-FB09-425F-A230-19A417638AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4A4E09-FB09-425F-A230-19A417638AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4A4E09-FB09-425F-A230-19A417638AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321308BC-C8C2-4E6A-8448-0A2C89B4713B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321308BC-C8C2-4E6A-8448-0A2C89B4713B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321308BC-C8C2-4E6A-8448-0A2C89B4713B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321308BC-C8C2-4E6A-8448-0A2C89B4713B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE2BD0B3-F200-42E2-9338-6048DC62F395}
+	EndGlobalSection
+EndGlobal
