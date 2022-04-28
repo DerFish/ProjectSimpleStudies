@@ -1,3 +1,5 @@
+using SimpleStudies.Data.Entities;
+
 namespace SimpleStudies
 {
     internal static class Program
@@ -6,11 +8,25 @@ namespace SimpleStudies
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            using (var db = new SimpleStudiesDbContext())
+            {
+                // Note: This sample requires the database to be created before running.
+                Console.WriteLine($"Database path: {db.DbPath}.");
+
+                db.Database.EnsureCreated();
+
+                db.Dozent.Add(new Dozent { Name = "Test", Email = "Test" });
+                db.SaveChanges();
+
+                var d = db.Dozent.FirstOrDefault();
+            }
+
             Application.Run(new Form1());
         }
     }
