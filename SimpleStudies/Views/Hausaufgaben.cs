@@ -17,5 +17,10 @@ namespace SimpleStudies.Views
             InitializeComponent();
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            Sitepanel c = (Sitepanel)sender;
+            panel3.Controls.Add(c);
+        }
     }
 }

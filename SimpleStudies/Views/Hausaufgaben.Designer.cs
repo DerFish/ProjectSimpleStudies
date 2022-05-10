@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -98,7 +99,7 @@
             this.label4.Size = new System.Drawing.Size(101, 31);
             this.label4.TabIndex = 2;
             this.label4.Text = "Themen:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+
             // 
             // label5
             // 
@@ -120,12 +121,22 @@
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1050, 111);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 587);
+            this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
             // Hausaufgaben
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1300, 698);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -152,5 +163,6 @@
         private Label label2;
         private Button button1;
         private Label label5;
+        private Panel panel3;
     }
 }
