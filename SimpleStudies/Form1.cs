@@ -13,5 +13,10 @@ namespace SimpleStudies
             Views.Sitepanel c = new Views.Sitepanel();
             panel2.Controls.Add(c);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
