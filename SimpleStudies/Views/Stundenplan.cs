@@ -44,6 +44,7 @@ namespace SimpleStudies.Views
         }
 
 
+<<<<<<< HEAD
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             Sitepanel c = new Sitepanel();
@@ -54,6 +55,8 @@ namespace SimpleStudies.Views
         {
             this.Close();
         }
+=======
+>>>>>>> parent of 7812037 (Revert "web")
     }
 }
 
