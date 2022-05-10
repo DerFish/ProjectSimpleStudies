@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleStudies.Data.Entities
 {
-    public class Kurs
+    public class Kurs : IEntity
     {
         public Dozent Dozent { get; set; }
         public int DozentId { get; set; }

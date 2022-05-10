@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimpleStudies.Data.Entities
 {
-    public class Dozent : IEntity
+    public interface IEntity
     {
-        public string Email { get; set; }
-        public int Id { get; set; }
-        public string Name { get; set; }
+        int Id { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleStudies.Data.Entities
 {
-    public class Lernplan
+    public class Lernplan : IEntity
     {
         public string Beschreibung { get; set; }
         public DateTime? GeplantAm { get; set; }

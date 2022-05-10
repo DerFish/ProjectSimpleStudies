@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleStudies.Data.Entities
 {
-    public class Hausaufgabe
+    public class Hausaufgabe : IEntity
     {
         public string Beschreibung { get; set; }
         public DateTime? Deadline { get; set; }

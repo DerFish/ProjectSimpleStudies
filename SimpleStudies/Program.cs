@@ -1,4 +1,5 @@
 using SimpleStudies.Data.Entities;
+using SimpleStudies.Data.Providers;
 
 namespace SimpleStudies
 {
@@ -24,7 +25,7 @@ namespace SimpleStudies
                 db.Dozent.Add(new Dozent { Name = "Test", Email = "Test" });
                 db.SaveChanges();
 
-                var d = db.Dozent.FirstOrDefault();
+                var d = DozentProvider.Instance.Get(1);
             }
 
             Application.Run(new Form1());

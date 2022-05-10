@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleStudies.Data.Entities
 {
-    public class Note
+    public class Note : IEntity
     {
         public decimal EndNote { get; set; }
         public int Id { get; set; }
