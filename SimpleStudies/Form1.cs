@@ -9,7 +9,6 @@ namespace SimpleStudies
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
             Views.Sitepanel c = new Views.Sitepanel();
             panel2.Controls.Add(c);
         }
@@ -17,6 +16,16 @@ namespace SimpleStudies
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (panel2.Visible)
+            {
+                panel2.Visible = false;
+            }
+            else
+            panel2.Visible = true;
         }
     }
 }
