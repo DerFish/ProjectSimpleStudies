@@ -41,18 +41,19 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(33, 24);
+            this.button1.Location = new System.Drawing.Point(12, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "Stundenplan";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(33, 99);
+            this.button2.Location = new System.Drawing.Point(12, 66);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(153, 36);
             this.button2.TabIndex = 1;
@@ -63,7 +64,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(33, 178);
+            this.button3.Location = new System.Drawing.Point(12, 108);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 36);
             this.button3.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(33, 259);
+            this.button4.Location = new System.Drawing.Point(12, 150);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(153, 36);
             this.button4.TabIndex = 3;
@@ -85,7 +86,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(33, 345);
+            this.button5.Location = new System.Drawing.Point(12, 192);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(153, 36);
             this.button5.TabIndex = 4;
@@ -96,7 +97,7 @@
             // 
             this.button6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(33, 422);
+            this.button6.Location = new System.Drawing.Point(12, 234);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(153, 36);
             this.button6.TabIndex = 5;
@@ -107,7 +108,7 @@
             // 
             this.button7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Location = new System.Drawing.Point(33, 505);
+            this.button7.Location = new System.Drawing.Point(12, 276);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(153, 36);
             this.button7.TabIndex = 6;
@@ -127,7 +128,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Sitepanel";
-            this.Size = new System.Drawing.Size(221, 573);
+            this.Size = new System.Drawing.Size(178, 334);
             this.ResumeLayout(false);
 
         }

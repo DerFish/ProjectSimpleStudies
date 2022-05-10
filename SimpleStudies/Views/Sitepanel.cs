@@ -16,5 +16,11 @@ namespace SimpleStudies.Views
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Stundenplan stundenplan = new Stundenplan();
+            stundenplan.Show();
+        }
     }
 }
