@@ -22,5 +22,11 @@ namespace SimpleStudies.Views
             Stundenplan stundenplan = new Stundenplan();
             stundenplan.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Notenübersicht notenübersicht = new Notenübersicht();
+            notenübersicht.Show();
+        }
     }
 }
