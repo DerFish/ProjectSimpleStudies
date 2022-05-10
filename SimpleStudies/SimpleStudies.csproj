@@ -22,6 +22,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="microsoft.web.webview2" Version="1.0.1210.39" />
   </ItemGroup>
 
   <ItemGroup>
