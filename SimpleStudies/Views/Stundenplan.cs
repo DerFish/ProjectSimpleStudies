@@ -43,15 +43,25 @@ namespace SimpleStudies.Views
             this.Text = e.Uri.ToString() + "Is loading . . .";
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void panel3_Paint_1(object sender, PaintEventArgs e)
         {
             Sitepanel c = new Sitepanel();
             panel3.Controls.Add(c);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (panel3.Visible)
+            {
+                panel3.Visible = false;
+            }
+            else
+                panel3.Visible = true;
         }
     }
 }

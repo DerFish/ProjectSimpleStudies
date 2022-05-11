@@ -23,9 +23,19 @@ namespace SimpleStudies.Views
             panel4.Controls.Add(c);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (panel4.Visible)
+            {
+                panel4.Visible = false;
+            }
+            else
+                panel4.Visible = true;
         }
     }
 }
