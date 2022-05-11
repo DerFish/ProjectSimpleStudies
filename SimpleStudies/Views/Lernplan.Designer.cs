@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,10 +37,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.sqliteCommand1 = new Microsoft.Data.Sqlite.SqliteCommand();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,6 +55,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1100, 125);
             this.panel1.TabIndex = 2;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1031, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(57, 42);
+            this.button3.TabIndex = 9;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -90,18 +101,18 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(69, 180);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 31);
+            this.label4.Size = new System.Drawing.Size(80, 31);
             this.label4.TabIndex = 3;
-            this.label4.Text = "ToDo:";
+            this.label4.Text = "Daum:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(269, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 31);
+            this.label2.Size = new System.Drawing.Size(88, 31);
             this.label2.TabIndex = 4;
-            this.label2.Text = "In Progress:";
+            this.label2.Text = "Thema:";
             // 
             // label3
             // 
@@ -121,15 +132,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Done:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(99, 328);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(438, 31);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Fächer in verschiedenen Farben schreiben";
-            // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -140,14 +142,22 @@
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button3
+            // sqliteCommand1
             // 
-            this.button3.Location = new System.Drawing.Point(1031, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(57, 42);
-            this.button3.TabIndex = 9;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.sqliteCommand1.CommandTimeout = 30;
+            this.sqliteCommand1.Connection = null;
+            this.sqliteCommand1.Transaction = null;
+            this.sqliteCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(69, 242);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(729, 188);
+            this.dataGridView1.TabIndex = 9;
             // 
             // Lernplan
             // 
@@ -155,8 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1100, 630);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -170,6 +180,7 @@
             this.Text = "Lernplan";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,10 +194,11 @@
         private Label label2;
         private Label label3;
         private Label label5;
-        private Label label6;
         private Panel panel2;
         private Button button1;
         private Button button2;
         private Button button3;
+        private Microsoft.Data.Sqlite.SqliteCommand sqliteCommand1;
+        private DataGridView dataGridView1;
     }
 }

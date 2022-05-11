@@ -12,6 +12,7 @@ namespace SimpleStudies.Views
 {
     public partial class Lernplan : Form
     {
+
         public Lernplan()
         {
             InitializeComponent();
