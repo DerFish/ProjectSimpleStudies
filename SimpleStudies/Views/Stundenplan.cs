@@ -12,7 +12,7 @@ using Microsoft.Web.WebView2.WinForms;
 
 namespace SimpleStudies.Views
 {
-    public partial class Stundenplan : Form
+    public partial class Stundenplan : UserControl
     {
         public Stundenplan()
         {
@@ -20,49 +20,29 @@ namespace SimpleStudies.Views
             InitializeBrowser();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private async Task Initizated()
-        {
-            await webView21.EnsureCoreWebView2Async(null);
-        }
         public async void InitializeBrowser()
         {
             Uri uri = new Uri("https://rapla.dhbw.de/rapla/calendar?key=25q8zGuMAw3elezlMsiegXs3Z-sCY45qHbigy7wiQ2e27FEEw1gUZrt95IawaK3jxZy_Y5bukYcuFWfh6SXaWScIBj1vU-rKPi1EJOM9QFX4p3tKwLad0qDpHO7Zn5W-IUQ1RhEYxI8ckde9URa_ng&salt=-2070726140");
             await Initizated();
             webView21.CoreWebView2.Navigate(uri.ToString());
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private async Task Initizated()
+        {
+            await webView21.EnsureCoreWebView2Async(null);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
         private void webView21_NavigationStarting(object sender, CoreWebView2NavigationStartingEventArgs e)
         {
             this.Text = e.Uri.ToString() + "Is loading . . .";
         }
-
-        private void panel3_Paint_1(object sender, PaintEventArgs e)
-        {
-            Sitepanel c = new Sitepanel();
-            panel3.Controls.Add(c);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (panel3.Visible)
-            {
-                panel3.Visible = false;
-            }
-            else
-                panel3.Visible = true;
-        }
     }
 }
-

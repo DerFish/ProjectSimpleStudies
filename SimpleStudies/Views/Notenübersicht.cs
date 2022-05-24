@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SimpleStudies.Views
 {
-    public partial class Notenübersicht : Form
+    public partial class Notenübersicht : UserControl
     {
         public Notenübersicht()
         {
@@ -20,22 +20,6 @@ namespace SimpleStudies.Views
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             Sitepanel c = new Sitepanel();
-            panel2.Controls.Add(c);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (panel2.Visible)
-            {
-                panel2.Visible = false;
-            }
-            else
-                panel2.Visible = true;
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimpleStudies.Events;
+using SimpleStudies.Models.Enums;
 
 namespace SimpleStudies.Views
 {
@@ -17,46 +19,51 @@ namespace SimpleStudies.Views
             InitializeComponent();
         }
 
+        public delegate void OnNavEvent(object sender, NavigationEvent e);
+
+        public event OnNavEvent NavEvent;
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Stundenplan stundenplan = new Stundenplan();
-            stundenplan.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Notenübersicht notenübersicht = new Notenübersicht();
-            notenübersicht.Show();
+            Navigate(NavView.Stundenplan);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Hausaufgaben hausaufgaben = new Hausaufgaben();
-            hausaufgaben.Show();
+            Navigate(NavView.Hausaufgabe);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Lernplan lernplan = new Lernplan();
-            lernplan.Show();
+            Navigate(NavView.Lernplan);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            E_Mail_Adressen e_Mail_Adressen = new E_Mail_Adressen();
-            e_Mail_Adressen.Show();
+            Navigate(NavView.EMail);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Navigate(NavView.Notenuebersicht);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            NewsFeed newsFeed = new NewsFeed();
-            newsFeed.Show();
+            Navigate(NavView.Newsfeed);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Verwaltung verwaltung = new Verwaltung();
-            verwaltung.Show();
+            Navigate(NavView.Verwaltung);
+        }
+
+        private void Navigate(NavView view)
+        {
+            if (NavEvent != null)
+            {
+                NavEvent.Invoke(this, new NavigationEvent(view));
+            }
         }
     }
 }
