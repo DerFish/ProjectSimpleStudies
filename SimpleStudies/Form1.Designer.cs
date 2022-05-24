@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.kurse1 = new SimpleStudies.Views.Kurse();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(352, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 45);
+            this.label1.Size = new System.Drawing.Size(339, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to Simple Studies";
             // 
@@ -87,12 +88,21 @@
             this.panel2.Visible = false;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // kurse1
+            // 
+            this.kurse1.Location = new System.Drawing.Point(0, 129);
+            this.kurse1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kurse1.Name = "kurse1";
+            this.kurse1.Size = new System.Drawing.Size(1100, 501);
+            this.kurse1.TabIndex = 2;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1100, 630);
+            this.Controls.Add(this.kurse1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -114,5 +124,6 @@
         private Panel panel2;
         private Button button1;
         private Button button2;
+        private Views.Kurse kurse1;
     }
 }

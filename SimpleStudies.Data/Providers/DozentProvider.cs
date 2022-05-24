@@ -19,5 +19,13 @@ namespace SimpleStudies.Data.Providers
         /// Gets the singleton instance for this provider
         /// </summary>
         public static DozentProvider Instance => instance ?? (instance = new DozentProvider());
+
+        public List<Dozent> GetAll()
+        {
+            using (var context = new SimpleStudiesDbContext())
+            {
+                return context.Dozent.ToList();
+            }
+        }
     }
 }

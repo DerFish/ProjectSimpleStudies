@@ -22,10 +22,9 @@ namespace SimpleStudies
 
                 db.Database.EnsureCreated();
 
-                db.Dozent.Add(new Dozent { Name = "Test", Email = "Test" });
-                db.SaveChanges();
-
-                var d = DozentProvider.Instance.Get(1);
+                //  db.Dozent.Add(new Dozent { Name = "Test", Email = "Test" });
+                // db.Kurs.Add(new Kurs { Name = "Test", DozentId = 1 });
+                // db.SaveChanges();
             }
 
             Application.Run(new Form1());
