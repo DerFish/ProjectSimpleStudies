@@ -27,7 +27,7 @@ namespace SimpleStudies
                 // db.SaveChanges();
             }
 
-            Application.Run(new Form1());
+            Application.Run(new Main());
         }
     }
 }

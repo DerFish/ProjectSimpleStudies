@@ -2,64 +2,65 @@ using SimpleStudies.Events;
 
 namespace SimpleStudies
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
+
+            SpNav.NavEvent += C_NavEvent;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnSidepanel_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (panel2.Visible)
-            {
-                panel2.Visible = false;
-            }
-            else
-                panel2.Visible = true;
+            ScMain.Panel2Collapsed = !ScMain.Panel2Collapsed;
         }
 
         private void C_NavEvent(object? sender, NavigationEvent e)
         {
             UserControl control = null;
+            string title = "";
 
             switch (e.NavToView)
             {
                 case Models.Enums.NavView.Kurse:
                     control = new Views.Kurse();
+                    title = "Kurse";
                     break;
 
                 case Models.Enums.NavView.EMail:
                     control = new Views.E_Mail_Adressen();
+                    title = "EMails";
                     break;
 
                 case Models.Enums.NavView.Hausaufgabe:
                     control = new Views.Hausaufgaben();
+                    title = "Hausaufgaben";
                     break;
 
                 case Models.Enums.NavView.Lernplan:
                     control = new Views.Lernplan();
+                    title = "Lernplan";
                     break;
 
                 case Models.Enums.NavView.Newsfeed:
                     control = new Views.NewsFeed();
+                    title = "Newsfeed";
                     break;
 
                 case Models.Enums.NavView.Notenuebersicht:
                     control = new Views.Notenübersicht();
+                    title = "Notenübersicht";
                     break;
 
                 case Models.Enums.NavView.Stundenplan:
                     control = new Views.Stundenplan();
+                    title = "Stundenplan";
                     break;
 
                 case Models.Enums.NavView.Verwaltung:
-                    control = new Views.Verwaltung();
+                    control = new Views.Kurse();
+                    title = "Verwaltung";
                     break;
 
                 default:
@@ -71,17 +72,12 @@ namespace SimpleStudies
                 return;
             }
 
-            PMain.Controls.Clear();
+            ScMain.Panel1.Controls.Clear();
             control.Dock = DockStyle.Fill;
-            PMain.Controls.Add(control);
-            panel2.Visible = false;
-        }
+            ScMain.Panel1.Controls.Add(control);
+            ScMain.Panel2Collapsed = true;
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            Views.Sitepanel c = new Views.Sitepanel();
-            c.NavEvent += C_NavEvent;
-            panel2.Controls.Add(c);
+            LbLTitle.Text = title;
         }
     }
 }

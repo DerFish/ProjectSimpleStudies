@@ -29,6 +29,18 @@ namespace SimpleStudies.Views
             ResetView();
         }
 
+        private void AutoSizeColumnList(ListView listView)
+        {
+            //Prevents flickering
+            listView.BeginUpdate();
+            for (int i = 0; i <= listView.Columns.Count - 1; i++)
+            {
+                listView.Columns[i].Width = -2;
+            }
+
+            listView.EndUpdate();
+        }
+
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             ResetView();
@@ -134,6 +146,8 @@ namespace SimpleStudies.Views
 
                 LvCourses.Items.Add(lv);
             }
+
+            AutoSizeColumnList(LvCourses);
         }
 
         private void LoadDozenten()

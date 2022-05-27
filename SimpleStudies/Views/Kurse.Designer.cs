@@ -36,7 +36,6 @@
             this.ChSemester = new System.Windows.Forms.ColumnHeader();
             this.ChECTS = new System.Windows.Forms.ColumnHeader();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,11 +66,12 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(731, 385);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1358, 821);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // LvCourses
@@ -84,9 +84,10 @@
             this.ChECTS});
             this.LvCourses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LvCourses.FullRowSelect = true;
-            this.LvCourses.Location = new System.Drawing.Point(368, 3);
+            this.LvCourses.Location = new System.Drawing.Point(685, 6);
+            this.LvCourses.Margin = new System.Windows.Forms.Padding(6);
             this.LvCourses.Name = "LvCourses";
-            this.LvCourses.Size = new System.Drawing.Size(360, 379);
+            this.LvCourses.Size = new System.Drawing.Size(667, 809);
             this.LvCourses.TabIndex = 0;
             this.LvCourses.UseCompatibleStateImageBehavior = false;
             this.LvCourses.View = System.Windows.Forms.View.Details;
@@ -118,79 +119,73 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.5F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.5F));
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.CbDozent, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.TxtName, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.NudSemester, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.NudECTS, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.CbDozent, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.TxtName, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.NudSemester, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.NudECTS, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.BtnSave, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.BtnCancel, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.BtnEdit, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.BtnNew, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.BtnDisplay, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.BtnDelete, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.BtnEdit, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.BtnNew, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.BtnDisplay, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.BtnDelete, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.16949F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.83051F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(359, 379);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(667, 809);
             this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kurse";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 223);
+            this.label2.Location = new System.Drawing.Point(6, 120);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(78, 32);
             this.label2.TabIndex = 3;
             this.label2.Text = "Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 260);
+            this.label3.Location = new System.Drawing.Point(6, 180);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 15);
+            this.label3.Size = new System.Drawing.Size(91, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "Dozent";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 291);
+            this.label4.Location = new System.Drawing.Point(6, 240);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 15);
+            this.label4.Size = new System.Drawing.Size(113, 32);
             this.label4.TabIndex = 5;
             this.label4.Text = "Semester";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 325);
+            this.label5.Location = new System.Drawing.Point(6, 300);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 15);
+            this.label5.Size = new System.Drawing.Size(67, 32);
             this.label5.TabIndex = 6;
             this.label5.Text = "ECTS";
             // 
@@ -198,37 +193,42 @@
             // 
             this.CbDozent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbDozent.FormattingEnabled = true;
-            this.CbDozent.Location = new System.Drawing.Point(169, 263);
+            this.CbDozent.Location = new System.Drawing.Point(316, 186);
+            this.CbDozent.Margin = new System.Windows.Forms.Padding(6);
             this.CbDozent.Name = "CbDozent";
-            this.CbDozent.Size = new System.Drawing.Size(121, 23);
+            this.CbDozent.Size = new System.Drawing.Size(221, 40);
             this.CbDozent.TabIndex = 7;
             // 
             // TxtName
             // 
-            this.TxtName.Location = new System.Drawing.Point(169, 226);
+            this.TxtName.Location = new System.Drawing.Point(316, 126);
+            this.TxtName.Margin = new System.Windows.Forms.Padding(6);
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(100, 23);
+            this.TxtName.Size = new System.Drawing.Size(182, 39);
             this.TxtName.TabIndex = 8;
             // 
             // NudSemester
             // 
-            this.NudSemester.Location = new System.Drawing.Point(169, 294);
+            this.NudSemester.Location = new System.Drawing.Point(316, 246);
+            this.NudSemester.Margin = new System.Windows.Forms.Padding(6);
             this.NudSemester.Name = "NudSemester";
-            this.NudSemester.Size = new System.Drawing.Size(120, 23);
+            this.NudSemester.Size = new System.Drawing.Size(223, 39);
             this.NudSemester.TabIndex = 9;
             // 
             // NudECTS
             // 
-            this.NudECTS.Location = new System.Drawing.Point(169, 328);
+            this.NudECTS.Location = new System.Drawing.Point(316, 306);
+            this.NudECTS.Margin = new System.Windows.Forms.Padding(6);
             this.NudECTS.Name = "NudECTS";
-            this.NudECTS.Size = new System.Drawing.Size(120, 23);
+            this.NudECTS.Size = new System.Drawing.Size(223, 39);
             this.NudECTS.TabIndex = 10;
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(3, 347);
+            this.BtnSave.Location = new System.Drawing.Point(6, 755);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(6);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(75, 23);
+            this.BtnSave.Size = new System.Drawing.Size(139, 48);
             this.BtnSave.TabIndex = 12;
             this.BtnSave.Text = "Speichern";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -236,9 +236,10 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(169, 347);
+            this.BtnCancel.Location = new System.Drawing.Point(316, 755);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(6);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancel.Size = new System.Drawing.Size(139, 48);
             this.BtnCancel.TabIndex = 13;
             this.BtnCancel.Text = "Abbrechen";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -246,9 +247,10 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(169, 178);
+            this.BtnEdit.Location = new System.Drawing.Point(316, 66);
+            this.BtnEdit.Margin = new System.Windows.Forms.Padding(6);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(75, 23);
+            this.BtnEdit.Size = new System.Drawing.Size(139, 48);
             this.BtnEdit.TabIndex = 14;
             this.BtnEdit.Text = "Ändern";
             this.BtnEdit.UseVisualStyleBackColor = true;
@@ -256,9 +258,10 @@
             // 
             // BtnNew
             // 
-            this.BtnNew.Location = new System.Drawing.Point(3, 178);
+            this.BtnNew.Location = new System.Drawing.Point(6, 66);
+            this.BtnNew.Margin = new System.Windows.Forms.Padding(6);
             this.BtnNew.Name = "BtnNew";
-            this.BtnNew.Size = new System.Drawing.Size(75, 23);
+            this.BtnNew.Size = new System.Drawing.Size(139, 48);
             this.BtnNew.TabIndex = 1;
             this.BtnNew.Text = "Neu";
             this.BtnNew.UseVisualStyleBackColor = true;
@@ -266,9 +269,10 @@
             // 
             // BtnDisplay
             // 
-            this.BtnDisplay.Location = new System.Drawing.Point(3, 108);
+            this.BtnDisplay.Location = new System.Drawing.Point(6, 6);
+            this.BtnDisplay.Margin = new System.Windows.Forms.Padding(6);
             this.BtnDisplay.Name = "BtnDisplay";
-            this.BtnDisplay.Size = new System.Drawing.Size(75, 23);
+            this.BtnDisplay.Size = new System.Drawing.Size(139, 48);
             this.BtnDisplay.TabIndex = 11;
             this.BtnDisplay.Text = "Anzeigen";
             this.BtnDisplay.UseVisualStyleBackColor = true;
@@ -276,20 +280,22 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(169, 108);
+            this.BtnDelete.Location = new System.Drawing.Point(316, 6);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(75, 23);
+            this.BtnDelete.Size = new System.Drawing.Size(139, 48);
             this.BtnDelete.TabIndex = 2;
             this.BtnDelete.Text = "Löschen";
             this.BtnDelete.UseVisualStyleBackColor = true;
             // 
             // Kurse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Kurse";
-            this.Size = new System.Drawing.Size(731, 385);
+            this.Size = new System.Drawing.Size(1358, 821);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -311,7 +317,6 @@
         private ColumnHeader ChId;
         private ColumnHeader ChName;
         private TableLayoutPanel tableLayoutPanel2;
-        private Label label1;
         private Button BtnNew;
         private Button BtnDelete;
         private Label label2;
