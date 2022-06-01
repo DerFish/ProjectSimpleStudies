@@ -53,7 +53,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(2887, 1880);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1297, 804);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // LbLTitle
@@ -62,7 +62,7 @@
             this.LbLTitle.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbLTitle.Location = new System.Drawing.Point(3, 0);
             this.LbLTitle.Name = "LbLTitle";
-            this.LbLTitle.Size = new System.Drawing.Size(1775, 170);
+            this.LbLTitle.Size = new System.Drawing.Size(893, 80);
             this.LbLTitle.TabIndex = 2;
             this.LbLTitle.Text = "Wilkommen zu Simple Studies";
             // 
@@ -70,14 +70,14 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.ScMain, 2);
             this.ScMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ScMain.Location = new System.Drawing.Point(3, 191);
+            this.ScMain.Location = new System.Drawing.Point(3, 83);
             this.ScMain.Name = "ScMain";
             // 
             // ScMain.Panel2
             // 
             this.ScMain.Panel2.Controls.Add(this.SpNav);
-            this.ScMain.Size = new System.Drawing.Size(2881, 1686);
-            this.ScMain.SplitterDistance = 2475;
+            this.ScMain.Size = new System.Drawing.Size(1291, 718);
+            this.ScMain.SplitterDistance = 1109;
             this.ScMain.TabIndex = 4;
             // 
             // SpNav
@@ -87,16 +87,16 @@
             this.SpNav.Location = new System.Drawing.Point(0, 0);
             this.SpNav.Margin = new System.Windows.Forms.Padding(7);
             this.SpNav.Name = "SpNav";
-            this.SpNav.Size = new System.Drawing.Size(402, 1686);
+            this.SpNav.Size = new System.Drawing.Size(178, 718);
             this.SpNav.TabIndex = 0;
             // 
             // BtnSidepanel
             // 
             this.BtnSidepanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnSidepanel.Location = new System.Drawing.Point(2630, 20);
+            this.BtnSidepanel.Location = new System.Drawing.Point(1152, 0);
             this.BtnSidepanel.Margin = new System.Windows.Forms.Padding(0);
             this.BtnSidepanel.Name = "BtnSidepanel";
-            this.BtnSidepanel.Size = new System.Drawing.Size(193, 147);
+            this.BtnSidepanel.Size = new System.Drawing.Size(145, 80);
             this.BtnSidepanel.TabIndex = 3;
             this.BtnSidepanel.Text = "_";
             this.BtnSidepanel.UseVisualStyleBackColor = true;
@@ -104,10 +104,10 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(2887, 1880);
+            this.ClientSize = new System.Drawing.Size(1297, 804);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;

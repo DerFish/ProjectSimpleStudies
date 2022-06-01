@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimpleStudies.Data.Entities;
 using SimpleStudies.Data.Providers;
+using SimpleStudies.Extensions;
 using SimpleStudies.Models;
 using SimpleStudies.Models.Enums;
 
@@ -27,18 +28,6 @@ namespace SimpleStudies.Views
             mode = ViewMode.Normal;
 
             ResetView();
-        }
-
-        private void AutoSizeColumnList(ListView listView)
-        {
-            //Prevents flickering
-            listView.BeginUpdate();
-            for (int i = 0; i <= listView.Columns.Count - 1; i++)
-            {
-                listView.Columns[i].Width = -2;
-            }
-
-            listView.EndUpdate();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -142,12 +131,11 @@ namespace SimpleStudies.Views
             {
                 var lvItem = new string[] { course.Id.ToString(), course.Name, course.Dozent.Name, course.Semester.ToString(), course.ECTS.ToString() };
                 var lv = new BindableListViewItem<Kurs>(lvItem, course);
-                lv.Tag = course;
 
                 LvCourses.Items.Add(lv);
             }
 
-            AutoSizeColumnList(LvCourses);
+            LvCourses.AutoSizeColumnList();
         }
 
         private void LoadDozenten()
