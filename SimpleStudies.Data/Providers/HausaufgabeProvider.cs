@@ -21,9 +21,14 @@ namespace SimpleStudies.Data.Providers
         /// </summary>
         public static HausaufgabeProvider Instance => instance ?? (instance = new HausaufgabeProvider());
 
-        public void Edit(Hausaufgabe selectedElement)
+        public void Edit(Hausaufgabe element)
         {
-            throw new NotImplementedException();
+            using (var context = new SimpleStudiesDbContext())
+            {
+                context.Hausaufgabe.Attach(element);
+                context.Entry(element).State = EntityState.Modified;
+                context.SaveChanges();
+            }
         }
 
         public List<Hausaufgabe> GetAll()

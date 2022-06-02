@@ -28,114 +28,266 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lvGrades = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnNew = new System.Windows.Forms.Button();
+            this.BtnDisplay = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnEdit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.BtnCancel = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbCourse = new System.Windows.Forms.ComboBox();
+            this.cbType = new System.Windows.Forms.ComboBox();
+            this.NudGrade = new System.Windows.Forms.NumericUpDown();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NudGrade)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // tableLayoutPanel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 125);
-            this.panel1.TabIndex = 4;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.54546F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.45454F));
+            this.tableLayoutPanel1.Controls.Add(this.lvGrades, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1100, 630);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button2
+            // lvGrades
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(1157, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Home";
-            this.button2.UseVisualStyleBackColor = false;
+            this.lvGrades.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.lvGrades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvGrades.FullRowSelect = true;
+            this.lvGrades.Location = new System.Drawing.Point(592, 3);
+            this.lvGrades.MultiSelect = false;
+            this.lvGrades.Name = "lvGrades";
+            this.lvGrades.Size = new System.Drawing.Size(505, 624);
+            this.lvGrades.TabIndex = 0;
+            this.lvGrades.UseCompatibleStateImageBehavior = false;
+            this.lvGrades.View = System.Windows.Forms.View.Details;
+            this.lvGrades.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Kurs";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Typ";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Note";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.BtnNew, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.BtnDisplay, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.BtnDelete, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.BtnEdit, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.BtnCancel, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.BtnSave, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cbCourse, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.cbType, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.NudGrade, 1, 4);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(583, 624);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // BtnNew
+            // 
+            this.BtnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnNew.Location = new System.Drawing.Point(3, 38);
+            this.BtnNew.Name = "BtnNew";
+            this.BtnNew.Size = new System.Drawing.Size(285, 29);
+            this.BtnNew.TabIndex = 15;
+            this.BtnNew.Text = "Neu";
+            this.BtnNew.UseVisualStyleBackColor = true;
+            this.BtnNew.Click += new System.EventHandler(this.BtnNew_Click);
+            // 
+            // BtnDisplay
+            // 
+            this.BtnDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnDisplay.Location = new System.Drawing.Point(3, 3);
+            this.BtnDisplay.Name = "BtnDisplay";
+            this.BtnDisplay.Size = new System.Drawing.Size(285, 29);
+            this.BtnDisplay.TabIndex = 17;
+            this.BtnDisplay.Text = "Anzeigen";
+            this.BtnDisplay.UseVisualStyleBackColor = true;
+            this.BtnDisplay.Click += new System.EventHandler(this.BtnDisplay_Click);
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnDelete.Location = new System.Drawing.Point(294, 38);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(286, 29);
+            this.BtnDelete.TabIndex = 16;
+            this.BtnDelete.Text = "Löschen";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnEdit.Location = new System.Drawing.Point(294, 3);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(286, 29);
+            this.BtnEdit.TabIndex = 20;
+            this.BtnEdit.Text = "Ändern";
+            this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(154, 40);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Notenübersicht";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 154);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Fach:";
+            this.label1.Size = new System.Drawing.Size(285, 35);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Kurs";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 154);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(3, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Noten:";
+            this.label2.Size = new System.Drawing.Size(285, 35);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Typ";
             // 
-            // label4
+            // BtnCancel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(672, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Durchschnitt:";
+            this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnCancel.Location = new System.Drawing.Point(294, 178);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(286, 29);
+            this.BtnCancel.TabIndex = 19;
+            this.BtnCancel.Text = "Abbrechen";
+            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // button1
+            // BtnSave
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(990, 657);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 29);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSave.Location = new System.Drawing.Point(3, 178);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(285, 29);
+            this.BtnSave.TabIndex = 18;
+            this.BtnSave.Text = "Speichern";
+            this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(3, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(285, 35);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Note";
+            // 
+            // cbCourse
+            // 
+            this.cbCourse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCourse.FormattingEnabled = true;
+            this.cbCourse.Location = new System.Drawing.Point(294, 73);
+            this.cbCourse.Name = "cbCourse";
+            this.cbCourse.Size = new System.Drawing.Size(286, 33);
+            this.cbCourse.TabIndex = 24;
+            // 
+            // cbType
+            // 
+            this.cbType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Location = new System.Drawing.Point(294, 108);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(286, 33);
+            this.cbType.TabIndex = 25;
+            // 
+            // NudGrade
+            // 
+            this.NudGrade.DecimalPlaces = 1;
+            this.NudGrade.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NudGrade.Location = new System.Drawing.Point(294, 143);
+            this.NudGrade.Name = "NudGrade";
+            this.NudGrade.Size = new System.Drawing.Size(286, 32);
+            this.NudGrade.TabIndex = 26;
             // 
             // Notenübersicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Notenübersicht";
             this.Size = new System.Drawing.Size(1100, 630);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NudGrade)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Panel panel1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private ListView lvGrades;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Button BtnNew;
+        private Button BtnDisplay;
+        private Button BtnCancel;
+        private Button BtnSave;
+        private Button BtnDelete;
+        private Button BtnEdit;
         private Label label1;
-        private Label label3;
         private Label label2;
-        private Label label4;
-        private Button button1;
-        private Button button2;
+        private Label label3;
+        private ComboBox cbCourse;
+        private ComboBox cbType;
+        private NumericUpDown NudGrade;
     }
 }
