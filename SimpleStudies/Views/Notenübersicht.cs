@@ -15,7 +15,7 @@ using SimpleStudies.Models.Enums;
 
 namespace SimpleStudies.Views
 {
-    public partial class Notenübersicht : UserControl
+    public partial class Notenübersicht : UserControl, IView
     {
         private ViewMode mode;
         private Note SelectedElement;
@@ -26,6 +26,29 @@ namespace SimpleStudies.Views
 
             InitCbs();
             ResetView();
+        }
+
+        public int Semester { get; set; }
+
+        public void ResetView()
+        {
+            BtnSave.Visible = false;
+            BtnCancel.Visible = false;
+
+            BtnDisplay.Visible = true;
+            BtnDelete.Visible = true;
+            BtnEdit.Visible = true;
+            BtnNew.Visible = true;
+
+            BtnEdit.Enabled = false;
+            BtnDelete.Enabled = false;
+
+            cbType.Enabled = false;
+            cbCourse.Enabled = false;
+            NudGrade.Enabled = false;
+
+            lvGrades.Enabled = true;
+            LoadGrades();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -104,7 +127,7 @@ namespace SimpleStudies.Views
             cbType.Items.Clear();
             cbType.Items.AddRange(new string[] { "Klausur", "Präsentation" });
 
-            var courses = KursProvider.Instance.GetAll();
+            var courses = KursProvider.Instance.GetAll(Semester);
             cbCourse.DisplayMember = "Name";
             cbCourse.ValueMember = "Id";
             cbCourse.Items.AddRange(courses.ToArray()); ;
@@ -148,7 +171,7 @@ namespace SimpleStudies.Views
         {
             lvGrades.Items.Clear();
 
-            var grades = NoteProvider.Instance.GetAll();
+            var grades = NoteProvider.Instance.GetAll(Semester);
 
             foreach (var grade in grades)
             {
@@ -159,27 +182,6 @@ namespace SimpleStudies.Views
             }
 
             lvGrades.AutoSizeColumnList();
-        }
-
-        private void ResetView()
-        {
-            BtnSave.Visible = false;
-            BtnCancel.Visible = false;
-
-            BtnDisplay.Visible = true;
-            BtnDelete.Visible = true;
-            BtnEdit.Visible = true;
-            BtnNew.Visible = true;
-
-            BtnEdit.Enabled = false;
-            BtnDelete.Enabled = false;
-
-            cbType.Enabled = false;
-            cbCourse.Enabled = false;
-            NudGrade.Enabled = false;
-
-            lvGrades.Enabled = true;
-            LoadGrades();
         }
     }
 }

@@ -194,9 +194,24 @@
             // NudSemester
             // 
             this.NudSemester.Location = new System.Drawing.Point(169, 115);
+            this.NudSemester.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.NudSemester.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NudSemester.Name = "NudSemester";
             this.NudSemester.Size = new System.Drawing.Size(120, 23);
             this.NudSemester.TabIndex = 9;
+            this.NudSemester.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // NudECTS
             // 

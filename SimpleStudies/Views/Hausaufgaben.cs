@@ -15,7 +15,7 @@ using SimpleStudies.Models.Enums;
 
 namespace SimpleStudies.Views
 {
-    public partial class Hausaufgaben : UserControl
+    public partial class Hausaufgaben : UserControl, IView
     {
         private ViewMode mode;
         private Hausaufgabe SelectedElement;
@@ -30,6 +30,32 @@ namespace SimpleStudies.Views
 
             ResetView();
             FillStatus();
+        }
+
+        public int Semester { get; set; }
+
+        public void ResetView()
+        {
+            BtnSave.Visible = false;
+            BtnCancel.Visible = false;
+
+            BtnDisplay.Visible = true;
+            BtnDelete.Visible = true;
+            BtnEdit.Visible = true;
+            BtnNew.Visible = true;
+
+            BtnEdit.Enabled = false;
+            BtnDelete.Enabled = false;
+
+            CbCourses.Enabled = false;
+            CbStatus.Enabled = false;
+            TxtDescription.Enabled = false;
+            TxtNotes.Enabled = false;
+            DtpDeadline.Enabled = false;
+            DtpPlannedAt.Enabled = false;
+
+            LvHomework.Enabled = true;
+            LoadHomework();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -183,7 +209,7 @@ namespace SimpleStudies.Views
 
         private void LoadKurse()
         {
-            var courses = KursProvider.Instance.GetAll();
+            var courses = KursProvider.Instance.GetAll(Semester);
             CbCourses.DisplayMember = "Name";
             CbCourses.ValueMember = "Id";
             CbCourses.Items.AddRange(courses.ToArray()); ;
@@ -204,30 +230,6 @@ namespace SimpleStudies.Views
             BtnDelete.Enabled = true;
             SelectedElement = (LvHomework.SelectedItems[0] as BindableListViewItem<Hausaufgabe>).Data;
             FillFields(SelectedElement);
-        }
-
-        private void ResetView()
-        {
-            BtnSave.Visible = false;
-            BtnCancel.Visible = false;
-
-            BtnDisplay.Visible = true;
-            BtnDelete.Visible = true;
-            BtnEdit.Visible = true;
-            BtnNew.Visible = true;
-
-            BtnEdit.Enabled = false;
-            BtnDelete.Enabled = false;
-
-            CbCourses.Enabled = false;
-            CbStatus.Enabled = false;
-            TxtDescription.Enabled = false;
-            TxtNotes.Enabled = false;
-            DtpDeadline.Enabled = false;
-            DtpPlannedAt.Enabled = false;
-
-            LvHomework.Enabled = true;
-            LoadHomework();
         }
     }
 }

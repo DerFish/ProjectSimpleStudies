@@ -15,7 +15,7 @@ using SimpleStudies.Models.Enums;
 
 namespace SimpleStudies.Views
 {
-    public partial class Kurse : UserControl
+    public partial class Kurse : UserControl, IView
     {
         private ViewMode mode;
         private Kurs SelectedElement;
@@ -28,6 +28,30 @@ namespace SimpleStudies.Views
             mode = ViewMode.Normal;
 
             ResetView();
+        }
+
+        public int Semester { get; set; }
+
+        public void ResetView()
+        {
+            BtnSave.Visible = false;
+            BtnCancel.Visible = false;
+
+            BtnDisplay.Visible = true;
+            BtnDelete.Visible = true;
+            BtnEdit.Visible = true;
+            BtnNew.Visible = true;
+
+            BtnEdit.Enabled = false;
+            BtnDelete.Enabled = false;
+
+            TxtName.Enabled = false;
+            CbDozent.Enabled = false;
+            NudSemester.Enabled = false;
+            NudECTS.Enabled = false;
+
+            LvCourses.Enabled = true;
+            LoadCourses();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -56,6 +80,8 @@ namespace SimpleStudies.Views
             SelectedElement.DozentId = (CbDozent.SelectedItem as Dozent).Id;
             SelectedElement.Semester = (int)NudSemester.Value;
             SelectedElement.ECTS = (int)NudECTS.Value;
+
+            SelectedElement.Dozent = null;
 
             if (mode == ViewMode.Edit)
             {
@@ -125,7 +151,7 @@ namespace SimpleStudies.Views
         {
             LvCourses.Items.Clear();
 
-            var courses = KursProvider.Instance.GetAll();
+            var courses = KursProvider.Instance.GetAll(Semester);
 
             foreach (var course in courses)
             {
@@ -161,28 +187,6 @@ namespace SimpleStudies.Views
             BtnDelete.Enabled = true;
             SelectedElement = (LvCourses.SelectedItems[0] as BindableListViewItem<Kurs>).Data;
             FillFields(SelectedElement);
-        }
-
-        private void ResetView()
-        {
-            BtnSave.Visible = false;
-            BtnCancel.Visible = false;
-
-            BtnDisplay.Visible = true;
-            BtnDelete.Visible = true;
-            BtnEdit.Visible = true;
-            BtnNew.Visible = true;
-
-            BtnEdit.Enabled = false;
-            BtnDelete.Enabled = false;
-
-            TxtName.Enabled = false;
-            CbDozent.Enabled = false;
-            NudSemester.Enabled = false;
-            NudECTS.Enabled = false;
-
-            LvCourses.Enabled = true;
-            LoadCourses();
         }
     }
 }

@@ -31,11 +31,12 @@ namespace SimpleStudies.Data.Providers
             }
         }
 
-        public List<Kurs> GetAll()
+        public List<Kurs> GetAll(int semester)
         {
             using (var context = new SimpleStudiesDbContext())
             {
                 return context.Kurs
+                    .Where(w => semester == 0 || w.Semester == semester)
                     .Include(i => i.Dozent)
                     .ToList();
             }

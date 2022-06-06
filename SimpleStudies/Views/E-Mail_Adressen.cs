@@ -15,7 +15,7 @@ using SimpleStudies.Models.Enums;
 
 namespace SimpleStudies.Views
 {
-    public partial class E_Mail_Adressen : UserControl
+    public partial class E_Mail_Adressen : UserControl, IView
     {
         private ViewMode mode;
         private Dozent SelectedElement;
@@ -28,6 +28,28 @@ namespace SimpleStudies.Views
             mode = ViewMode.Normal;
 
             ResetView();
+        }
+
+        public int Semester { get; set; }
+
+        public void ResetView()
+        {
+            BtnSave.Visible = false;
+            BtnCancel.Visible = false;
+
+            BtnRefresh.Visible = true;
+            BtnDelete.Visible = true;
+            BtnEdit.Visible = true;
+            BtnCreate.Visible = true;
+
+            BtnEdit.Enabled = false;
+            BtnDelete.Enabled = false;
+
+            TxtName.Enabled = false;
+            TxtMail.Enabled = false;
+
+            LvLecturer.Enabled = true;
+            LoadData();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -143,26 +165,6 @@ namespace SimpleStudies.Views
             BtnDelete.Enabled = true;
             SelectedElement = (LvLecturer.SelectedItems[0] as BindableListViewItem<Dozent>).Data;
             FillFields(SelectedElement);
-        }
-
-        private void ResetView()
-        {
-            BtnSave.Visible = false;
-            BtnCancel.Visible = false;
-
-            BtnRefresh.Visible = true;
-            BtnDelete.Visible = true;
-            BtnEdit.Visible = true;
-            BtnCreate.Visible = true;
-
-            BtnEdit.Enabled = false;
-            BtnDelete.Enabled = false;
-
-            TxtName.Enabled = false;
-            TxtMail.Enabled = false;
-
-            LvLecturer.Enabled = true;
-            LoadData();
         }
     }
 }

@@ -1,4 +1,5 @@
 using SimpleStudies.Events;
+using SimpleStudies.Views;
 
 namespace SimpleStudies
 {
@@ -7,6 +8,7 @@ namespace SimpleStudies
         public Main()
         {
             InitializeComponent();
+            CbSemester.SelectedIndex = 1;
 
             SpNav.NavEvent += C_NavEvent;
         }
@@ -78,6 +80,32 @@ namespace SimpleStudies
             ScMain.Panel2Collapsed = true;
 
             LbLTitle.Text = title;
+
+            if (control is IView view)
+            {
+                view.Semester = GetSemester();
+                view.ResetView();
+            }
+        }
+
+        private void CbSemester_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ScMain.Panel1.Controls.Count == 0)
+            {
+                return;
+            }
+
+            var control = ScMain.Panel1.Controls[0];
+            if (control != null && (control is IView view))
+            {
+                view.Semester = GetSemester();
+                view.ResetView();
+            }
+        }
+
+        private int GetSemester()
+        {
+            return CbSemester.SelectedIndex;
         }
     }
 }
