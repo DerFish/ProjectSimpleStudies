@@ -188,5 +188,6 @@ namespace SimpleStudies.Views
             SelectedElement = (LvCourses.SelectedItems[0] as BindableListViewItem<Kurs>).Data;
             FillFields(SelectedElement);
         }
+
     }
 }

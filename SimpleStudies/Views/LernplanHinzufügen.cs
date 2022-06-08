@@ -12,8 +12,26 @@ namespace SimpleStudies.Views
 {
     public partial class LernplanHinzufügen : Form
     {
-        ListView listView1;
-        Lernplan lernplan;
+        public string datum
+        {
+            get { return textDatum.Text; }
+        }
+
+        public string zeit
+        {
+            get { return textZeit.Text; }
+        }
+
+        public string abgabedatum
+        {
+            get { return textAbgabedatum.Text; }
+        }
+
+        public string thema
+        {
+            get { return textThema.Text; }
+        }
+
 
         public LernplanHinzufügen()
         {
@@ -21,26 +39,8 @@ namespace SimpleStudies.Views
         }
 
         private void buttonAdd2_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(textDatum.Text) || string.IsNullOrEmpty(textZeit.Text))
-                return;
-
-
-            ListViewItem item = new ListViewItem(textDatum.Text);
-            item.SubItems.Add(textZeit.Text);
-
-            lernplan.textDatum = textDatum;
-            lernplan.textZeit = textZeit;
-            lernplan.listView1.Items.Add(item);
-
-            
-
-            textDatum.Clear();
-            textZeit.Clear();
-            textDatum.Focus();
-
-
-            
+        {  
+            DialogResult = DialogResult.OK;
         }
     }
 }
