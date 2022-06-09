@@ -40,9 +40,13 @@ namespace SimpleStudies.Views
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
-        {
-            if (listView.Items.Count > 0)
+        {   
+            if (listView.Items.Count > 0 && listView.SelectedItems.Count > 0)
                 listView.Items.Remove(listView.SelectedItems[0]);
+            else
+            {
+                MessageBox.Show("Bitte Item auswählen");
+            }
         }
     }
 }
