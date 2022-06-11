@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimpleStudies.Data.Providers;
 
 namespace SimpleStudies.Views
 {
@@ -44,11 +45,6 @@ namespace SimpleStudies.Views
             {
                 MessageBox.Show("Bitte Item auswählen");
             }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            Sitepanel c = new Sitepanel();
         }
     }
 }
