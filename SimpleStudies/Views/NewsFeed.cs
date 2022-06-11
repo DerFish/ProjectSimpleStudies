@@ -23,6 +23,8 @@ namespace SimpleStudies.Views
         public NewsFeed()
         {
             InitializeComponent();
+
+            ThemeManager.Instance.ApplyTheme(this.Controls);
         }
 
         public int Semester { get; set; }

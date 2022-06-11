@@ -23,6 +23,8 @@ namespace SimpleStudies.Views
         public Kurse()
         {
             InitializeComponent();
+            ThemeManager.Instance.ApplyTheme(this.Controls);
+
             this.Load += Kurse_Load;
 
             mode = ViewMode.Normal;
@@ -59,6 +61,11 @@ namespace SimpleStudies.Views
             ResetView();
         }
 
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteCourse();
+        }
+
         private void BtnDisplay_Click(object sender, EventArgs e)
         {
             LoadCourses();
@@ -76,10 +83,17 @@ namespace SimpleStudies.Views
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            SelectedElement.Name = TxtName.Text;
-            SelectedElement.DozentId = (CbDozent.SelectedItem as Dozent).Id;
-            SelectedElement.Semester = (int)NudSemester.Value;
-            SelectedElement.ECTS = (int)NudECTS.Value;
+            try
+            {
+                SelectedElement.Name = TxtName.Text;
+                SelectedElement.DozentId = (CbDozent.SelectedItem as Dozent).Id;
+                SelectedElement.Semester = (int)NudSemester.Value;
+                SelectedElement.ECTS = (int)NudECTS.Value;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bitte alle Daten auswählen!");
+            }
 
             SelectedElement.Dozent = null;
 
@@ -95,10 +109,17 @@ namespace SimpleStudies.Views
             ResetView();
         }
 
+        private void DeleteCourse()
+        {
+            KursProvider.Instance.Delete(SelectedElement);
+            ResetView();
+        }
+
         private void EnterCreateMode()
         {
             InitEditOrCreate();
             FillFields(new Kurs());
+            SelectedElement = new Kurs();
             mode = ViewMode.Create;
         }
 
@@ -120,7 +141,7 @@ namespace SimpleStudies.Views
                 }
             }
 
-            NudSemester.Value = data.Semester;
+            NudSemester.Value = data.Semester == 0 ? 1 : data.Semester;
             NudECTS.Value = data.ECTS;
         }
 
@@ -188,6 +209,5 @@ namespace SimpleStudies.Views
             SelectedElement = (LvCourses.SelectedItems[0] as BindableListViewItem<Kurs>).Data;
             FillFields(SelectedElement);
         }
-
     }
 }

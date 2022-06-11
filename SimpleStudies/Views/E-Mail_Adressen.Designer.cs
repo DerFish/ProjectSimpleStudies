@@ -51,9 +51,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.41414F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.58586F));
             this.tableLayoutPanel1.Controls.Add(this.LvLecturer, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -72,10 +71,10 @@
             this.columnHeader3});
             this.LvLecturer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LvLecturer.FullRowSelect = true;
-            this.LvLecturer.Location = new System.Drawing.Point(271, 3);
+            this.LvLecturer.Location = new System.Drawing.Point(448, 3);
             this.LvLecturer.MultiSelect = false;
             this.LvLecturer.Name = "LvLecturer";
-            this.LvLecturer.Size = new System.Drawing.Size(801, 613);
+            this.LvLecturer.Size = new System.Drawing.Size(624, 613);
             this.LvLecturer.TabIndex = 0;
             this.LvLecturer.UseCompatibleStateImageBehavior = false;
             this.LvLecturer.View = System.Windows.Forms.View.Details;
@@ -114,20 +113,21 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(262, 613);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(439, 613);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(134, 123);
+            this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnCancel.Location = new System.Drawing.Point(222, 163);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancel.Size = new System.Drawing.Size(214, 34);
             this.BtnCancel.TabIndex = 10;
             this.BtnCancel.Text = "Abbrechen";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -135,9 +135,10 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(134, 33);
+            this.BtnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnEdit.Location = new System.Drawing.Point(222, 43);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(75, 23);
+            this.BtnEdit.Size = new System.Drawing.Size(214, 34);
             this.BtnEdit.TabIndex = 3;
             this.BtnEdit.Text = "Ändern";
             this.BtnEdit.UseVisualStyleBackColor = true;
@@ -145,9 +146,10 @@
             // 
             // BtnCreate
             // 
-            this.BtnCreate.Location = new System.Drawing.Point(3, 33);
+            this.BtnCreate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnCreate.Location = new System.Drawing.Point(3, 43);
             this.BtnCreate.Name = "BtnCreate";
-            this.BtnCreate.Size = new System.Drawing.Size(75, 23);
+            this.BtnCreate.Size = new System.Drawing.Size(213, 34);
             this.BtnCreate.TabIndex = 2;
             this.BtnCreate.Text = "Neu";
             this.BtnCreate.UseVisualStyleBackColor = true;
@@ -155,9 +157,10 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(134, 3);
+            this.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnDelete.Location = new System.Drawing.Point(222, 3);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(75, 23);
+            this.BtnDelete.Size = new System.Drawing.Size(214, 34);
             this.BtnDelete.TabIndex = 1;
             this.BtnDelete.Text = "Löschen";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -165,9 +168,10 @@
             // 
             // BtnRefresh
             // 
+            this.BtnRefresh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnRefresh.Location = new System.Drawing.Point(3, 3);
             this.BtnRefresh.Name = "BtnRefresh";
-            this.BtnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.BtnRefresh.Size = new System.Drawing.Size(213, 34);
             this.BtnRefresh.TabIndex = 0;
             this.BtnRefresh.Text = "Anzeigen";
             this.BtnRefresh.UseVisualStyleBackColor = true;
@@ -176,23 +180,23 @@
             // TxtName
             // 
             this.TxtName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtName.Location = new System.Drawing.Point(134, 63);
+            this.TxtName.Location = new System.Drawing.Point(222, 83);
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(125, 32);
+            this.TxtName.Size = new System.Drawing.Size(214, 32);
             this.TxtName.TabIndex = 7;
             // 
             // TxtMail
             // 
             this.TxtMail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtMail.Location = new System.Drawing.Point(134, 93);
+            this.TxtMail.Location = new System.Drawing.Point(222, 123);
             this.TxtMail.Name = "TxtMail";
-            this.TxtMail.Size = new System.Drawing.Size(125, 32);
+            this.TxtMail.Size = new System.Drawing.Size(214, 32);
             this.TxtMail.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 60);
+            this.label2.Location = new System.Drawing.Point(3, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 25);
             this.label2.TabIndex = 5;
@@ -201,7 +205,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 90);
+            this.label3.Location = new System.Drawing.Point(3, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 25);
             this.label3.TabIndex = 6;
@@ -209,9 +213,10 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(3, 123);
+            this.BtnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSave.Location = new System.Drawing.Point(3, 163);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(75, 23);
+            this.BtnSave.Size = new System.Drawing.Size(213, 34);
             this.BtnSave.TabIndex = 9;
             this.BtnSave.Text = "Speichern";
             this.BtnSave.UseVisualStyleBackColor = true;

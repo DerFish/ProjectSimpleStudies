@@ -24,6 +24,8 @@ namespace SimpleStudies.Views
         {
             InitializeComponent();
 
+            ThemeManager.Instance.ApplyTheme(this.Controls);
+
             this.Load += Hausaufgaben_Load;
 
             mode = ViewMode.Normal;
@@ -65,7 +67,7 @@ namespace SimpleStudies.Views
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DeleteHomework();
         }
 
         private void BtnDisplay_Click(object sender, EventArgs e)
@@ -85,12 +87,19 @@ namespace SimpleStudies.Views
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            SelectedElement.KursId = (CbCourses.SelectedItem as Kurs).Id;
-            SelectedElement.StatusId = CbStatus.SelectedIndex;
-            SelectedElement.Beschreibung = TxtDescription.Text;
-            SelectedElement.Notizen = TxtNotes.Text;
-            SelectedElement.Deadline = GetNullableDtpValue(DtpDeadline);
-            SelectedElement.GeplantAm = GetNullableDtpValue(DtpPlannedAt);
+            try
+            {
+                SelectedElement.KursId = (CbCourses.SelectedItem as Kurs).Id;
+                SelectedElement.StatusId = CbStatus.SelectedIndex;
+                SelectedElement.Beschreibung = TxtDescription.Text;
+                SelectedElement.Notizen = TxtNotes.Text;
+                SelectedElement.Deadline = GetNullableDtpValue(DtpDeadline);
+                SelectedElement.GeplantAm = GetNullableDtpValue(DtpPlannedAt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bitte alle Daten auswählen!");
+            }
 
             if (mode == ViewMode.Edit)
             {
@@ -112,6 +121,12 @@ namespace SimpleStudies.Views
             }
 
             SelectedElement.StatusId = CbStatus.SelectedIndex;
+        }
+
+        private void DeleteHomework()
+        {
+            HausaufgabeProvider.Instance.Delete(SelectedElement);
+            ResetView();
         }
 
         private void EnterCreateMode()

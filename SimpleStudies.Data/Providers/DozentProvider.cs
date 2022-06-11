@@ -21,6 +21,25 @@ namespace SimpleStudies.Data.Providers
         /// </summary>
         public static DozentProvider Instance => instance ?? (instance = new DozentProvider());
 
+        public void Delete(Dozent selectedElement)
+        {
+            using (var context = new SimpleStudiesDbContext())
+            {
+                foreach (var course in context.Kurs.Where(w => w.DozentId == selectedElement.Id))
+                {
+                    context.Hausaufgabe.RemoveRange(context.Hausaufgabe.Where(w => w.KursId == course.Id));
+                    context.Note.RemoveRange(context.Note.Where(w => w.KursId == course.Id));
+                    context.Lernplan.RemoveRange(context.Lernplan.Where(w => w.KursId == course.Id));
+
+                    context.Kurs.Remove(context.Kurs.FirstOrDefault(f => f.Id == course.Id));
+                }
+
+                context.Dozent.Remove(context.Dozent.FirstOrDefault(f => f.Id == selectedElement.Id));
+
+                context.SaveChanges();
+            }
+        }
+
         public void Edit(Dozent element)
         {
             using (var context = new SimpleStudiesDbContext())

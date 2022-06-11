@@ -26,6 +26,8 @@ namespace SimpleStudies.Views
 
             InitCbs();
             ResetView();
+
+            ThemeManager.Instance.ApplyTheme(this.Controls);
         }
 
         public int Semester { get; set; }
@@ -58,6 +60,7 @@ namespace SimpleStudies.Views
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            DeleteGrade();
         }
 
         private void BtnDisplay_Click(object sender, EventArgs e)
@@ -90,6 +93,12 @@ namespace SimpleStudies.Views
                 NoteProvider.Instance.Add(SelectedElement);
             }
 
+            ResetView();
+        }
+
+        private void DeleteGrade()
+        {
+            NoteProvider.Instance.Delete(SelectedElement);
             ResetView();
         }
 

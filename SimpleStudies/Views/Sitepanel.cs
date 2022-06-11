@@ -17,6 +17,8 @@ namespace SimpleStudies.Views
         public Sitepanel()
         {
             InitializeComponent();
+
+            ThemeManager.Instance.ApplyTheme(this.Controls);
         }
 
         public delegate void OnNavEvent(object sender, NavigationEvent e);

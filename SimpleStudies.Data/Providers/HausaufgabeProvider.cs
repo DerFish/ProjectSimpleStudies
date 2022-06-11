@@ -21,6 +21,16 @@ namespace SimpleStudies.Data.Providers
         /// </summary>
         public static HausaufgabeProvider Instance => instance ?? (instance = new HausaufgabeProvider());
 
+        public void Delete(Hausaufgabe selectedElement)
+        {
+            using (var context = new SimpleStudiesDbContext())
+            {
+                context.Hausaufgabe.Remove(context.Hausaufgabe.FirstOrDefault(f => f.Id == selectedElement.Id));
+
+                context.SaveChanges();
+            }
+        }
+
         public void Edit(Hausaufgabe element)
         {
             using (var context = new SimpleStudiesDbContext())

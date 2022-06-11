@@ -18,6 +18,8 @@ namespace SimpleStudies.Views
         {
             InitializeComponent();
             InitializeBrowser();
+
+            ThemeManager.Instance.ApplyTheme(this.Controls);
         }
 
         public async void InitializeBrowser()

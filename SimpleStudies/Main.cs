@@ -11,6 +11,10 @@ namespace SimpleStudies
             CbSemester.SelectedIndex = 1;
 
             SpNav.NavEvent += C_NavEvent;
+
+            SetTheme();
+
+            CbSemester.Select();
         }
 
         private void BtnSidepanel_Click(object sender, EventArgs e)
@@ -32,7 +36,7 @@ namespace SimpleStudies
 
                 case Models.Enums.NavView.EMail:
                     control = new Views.E_Mail_Adressen();
-                    title = "EMails";
+                    title = "Dozenten";
                     break;
 
                 case Models.Enums.NavView.Hausaufgabe:
@@ -62,7 +66,7 @@ namespace SimpleStudies
 
                 case Models.Enums.NavView.Verwaltung:
                     control = new Views.Kurse();
-                    title = "Verwaltung";
+                    title = "Kurse";
                     break;
 
                 default:
@@ -106,6 +110,12 @@ namespace SimpleStudies
         private int GetSemester()
         {
             return CbSemester.SelectedIndex;
+        }
+
+        private void SetTheme()
+        {
+            ThemeManager.Instance.ApplyTheme(this.Controls);
+            SpNav.BackColor = ThemeManager.Instance.TertiaryColor;
         }
     }
 }

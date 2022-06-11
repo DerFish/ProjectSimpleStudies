@@ -21,6 +21,16 @@ namespace SimpleStudies.Data.Providers
         /// </summary>
         public static NoteProvider Instance => instance ?? (instance = new NoteProvider());
 
+        public void Delete(Note selectedElement)
+        {
+            using (var context = new SimpleStudiesDbContext())
+            {
+                context.Note.Remove(context.Note.FirstOrDefault(f => f.Id == selectedElement.Id));
+
+                context.SaveChanges();
+            }
+        }
+
         public void Edit(Note element)
         {
             using (var context = new SimpleStudiesDbContext())

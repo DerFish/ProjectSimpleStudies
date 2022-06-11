@@ -23,6 +23,9 @@ namespace SimpleStudies.Views
         public E_Mail_Adressen()
         {
             InitializeComponent();
+
+            ThemeManager.Instance.ApplyTheme(this.Controls);
+
             this.Load += E_Mail_Adressen_Load;
 
             mode = ViewMode.Normal;
@@ -64,6 +67,7 @@ namespace SimpleStudies.Views
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            DeleteMail();
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
@@ -93,6 +97,13 @@ namespace SimpleStudies.Views
             ResetView();
         }
 
+        private void DeleteMail()
+        {
+            DozentProvider.Instance.Delete(SelectedElement);
+
+            ResetView();
+        }
+
         private void E_Mail_Adressen_Load(object? sender, EventArgs e)
         {
             LoadData();
@@ -102,6 +113,7 @@ namespace SimpleStudies.Views
         {
             InitEditOrCreate();
             FillFields(new Dozent());
+            SelectedElement = new Dozent();
             mode = ViewMode.Create;
         }
 

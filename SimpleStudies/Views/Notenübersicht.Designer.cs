@@ -116,12 +116,12 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 7;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(583, 624);
             this.tableLayoutPanel2.TabIndex = 1;
@@ -129,9 +129,9 @@
             // BtnNew
             // 
             this.BtnNew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnNew.Location = new System.Drawing.Point(3, 38);
+            this.BtnNew.Location = new System.Drawing.Point(3, 43);
             this.BtnNew.Name = "BtnNew";
-            this.BtnNew.Size = new System.Drawing.Size(285, 29);
+            this.BtnNew.Size = new System.Drawing.Size(285, 34);
             this.BtnNew.TabIndex = 15;
             this.BtnNew.Text = "Neu";
             this.BtnNew.UseVisualStyleBackColor = true;
@@ -142,7 +142,7 @@
             this.BtnDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnDisplay.Location = new System.Drawing.Point(3, 3);
             this.BtnDisplay.Name = "BtnDisplay";
-            this.BtnDisplay.Size = new System.Drawing.Size(285, 29);
+            this.BtnDisplay.Size = new System.Drawing.Size(285, 34);
             this.BtnDisplay.TabIndex = 17;
             this.BtnDisplay.Text = "Anzeigen";
             this.BtnDisplay.UseVisualStyleBackColor = true;
@@ -151,9 +151,9 @@
             // BtnDelete
             // 
             this.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnDelete.Location = new System.Drawing.Point(294, 38);
+            this.BtnDelete.Location = new System.Drawing.Point(294, 43);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(286, 29);
+            this.BtnDelete.Size = new System.Drawing.Size(286, 34);
             this.BtnDelete.TabIndex = 16;
             this.BtnDelete.Text = "Löschen";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             this.BtnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnEdit.Location = new System.Drawing.Point(294, 3);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(286, 29);
+            this.BtnEdit.Size = new System.Drawing.Size(286, 34);
             this.BtnEdit.TabIndex = 20;
             this.BtnEdit.Text = "Ändern";
             this.BtnEdit.UseVisualStyleBackColor = true;
@@ -174,9 +174,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 70);
+            this.label1.Location = new System.Drawing.Point(3, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 35);
+            this.label1.Size = new System.Drawing.Size(285, 40);
             this.label1.TabIndex = 21;
             this.label1.Text = "Kurs";
             // 
@@ -184,18 +184,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 105);
+            this.label2.Location = new System.Drawing.Point(3, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 35);
+            this.label2.Size = new System.Drawing.Size(285, 40);
             this.label2.TabIndex = 22;
             this.label2.Text = "Typ";
             // 
             // BtnCancel
             // 
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnCancel.Location = new System.Drawing.Point(294, 178);
+            this.BtnCancel.Location = new System.Drawing.Point(294, 203);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(286, 29);
+            this.BtnCancel.Size = new System.Drawing.Size(286, 34);
             this.BtnCancel.TabIndex = 19;
             this.BtnCancel.Text = "Abbrechen";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -204,9 +204,9 @@
             // BtnSave
             // 
             this.BtnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSave.Location = new System.Drawing.Point(3, 178);
+            this.BtnSave.Location = new System.Drawing.Point(3, 203);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(285, 29);
+            this.BtnSave.Size = new System.Drawing.Size(285, 34);
             this.BtnSave.TabIndex = 18;
             this.BtnSave.Text = "Speichern";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -216,9 +216,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 140);
+            this.label3.Location = new System.Drawing.Point(3, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(285, 35);
+            this.label3.Size = new System.Drawing.Size(285, 40);
             this.label3.TabIndex = 23;
             this.label3.Text = "Note";
             // 
@@ -227,7 +227,7 @@
             this.cbCourse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCourse.FormattingEnabled = true;
-            this.cbCourse.Location = new System.Drawing.Point(294, 73);
+            this.cbCourse.Location = new System.Drawing.Point(294, 83);
             this.cbCourse.Name = "cbCourse";
             this.cbCourse.Size = new System.Drawing.Size(286, 33);
             this.cbCourse.TabIndex = 24;
@@ -236,7 +236,7 @@
             // 
             this.cbType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbType.FormattingEnabled = true;
-            this.cbType.Location = new System.Drawing.Point(294, 108);
+            this.cbType.Location = new System.Drawing.Point(294, 123);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(286, 33);
             this.cbType.TabIndex = 25;
@@ -245,7 +245,7 @@
             // 
             this.NudGrade.DecimalPlaces = 1;
             this.NudGrade.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NudGrade.Location = new System.Drawing.Point(294, 143);
+            this.NudGrade.Location = new System.Drawing.Point(294, 163);
             this.NudGrade.Name = "NudGrade";
             this.NudGrade.Size = new System.Drawing.Size(286, 32);
             this.NudGrade.TabIndex = 26;

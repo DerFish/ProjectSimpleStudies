@@ -18,17 +18,14 @@ namespace SimpleStudies.Views
         public Lernplan()
         {
             InitializeComponent();
-        }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            Sitepanel c = new Sitepanel();
+            ThemeManager.Instance.ApplyTheme(this.Controls);
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             LernplanHinzufügen f = new LernplanHinzufügen();
-            if(f.ShowDialog() == DialogResult.OK)
+            if (f.ShowDialog() == DialogResult.OK)
             {
                 ListViewItem item = new ListViewItem(f.datum);
                 item.SubItems.Add(f.zeit);
@@ -40,13 +37,18 @@ namespace SimpleStudies.Views
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
-        {   
+        {
             if (listView.Items.Count > 0 && listView.SelectedItems.Count > 0)
                 listView.Items.Remove(listView.SelectedItems[0]);
             else
             {
                 MessageBox.Show("Bitte Item auswählen");
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Sitepanel c = new Sitepanel();
         }
     }
 }
