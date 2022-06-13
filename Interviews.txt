@@ -1,0 +1,36 @@
+Interview mit Product Owner Nicolas Messerschmidt:
+
+Herr Messerschmidt, Sie haben es sich laut eigener Aussage mit einem erfahrenen Entwicklerteam zur Aufgabe gemacht ein neues Tool für Studenten herzustellen. Was genau kann dieses Tool?
+
+Antwort:
+- Wir reden hier nicht nur von einem Tool, Project Simple Studies ist eine Lebenseinstellung für alle Studenten, die einen geregelten Alltag haben wollen. 
+- Folgende Funktionen sind enthalten:
+    - Lernplan
+    - Hausaufgabenübersicht
+    - EMail Adressen Übersicht
+    - Notenübersicht
+    - kp was noch fehlt
+- Diese Funktionen werden das Studieren revolutionieren
+
+Was genau ist der Unterschied zwischen Ihrem Tool und anderen gängigen Tools für die Alltagsorganisation?
+
+Antwort:
+- Dieses Tool wurde mit intensiver Zusammenarbeit mit den faulsten Studenten entwickelt und deckt damit auch die Bedürfnisse der chaotischsten Studenten im Detail ab
+- Unsere Entwickler haben es sich zur Aufgabe gemacht, den Alltag von allen Studenten zu erleichtern, denn mit unserem Tool sind alle Parameter und Einstellungen individuell anpassbar und damit für jeden Studenten passend zugschnitten
+- Es wurden keine Kosten und Mühen gescheut um weltbeste Entwickler wie beispielsweise Senior Developer Matthias Lay ins Entwicklerteam zu holen
+
+Sie sprechen von einer Revolution des Studierends durch Ihr Projekt. Inwiefern wird sich diese bemerkbar machen?
+
+Antwort:
+- Studenten werden endlich einen organisierten Alltag haben 
+- Das führt zu:
+    - deutlich weniger schlafenden Studenten während der Vorlesung
+    - erhöhte Konzentration und Leistungsfähigkeit vor allem bei den Klausuren
+    - zufriedenere und ambitionierte Studenten 
+- erhöhter Bildungsstandard und damit letztendlich eine stärkere Wirtschaft
+
+Herr Messerschmidt das hört sich alles unglaublich an, vielen Dank für das Interview. Wäre es möglich, ein Interview mit einem der hochqualifizierten Entwickler zu führen, um tiefere Einblicke in die technischen Spezifikationen zu bekommen?
+
+Antwort:
+- Ich danke Ihnen
+- Natürlich können Sie ein Interview mit Senior Developer Matthias Lay führen.
