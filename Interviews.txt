@@ -19,6 +19,12 @@ Antwort:
 - Unsere Entwickler haben es sich zur Aufgabe gemacht, den Alltag von allen Studenten zu erleichtern, denn mit unserem Tool sind alle Parameter und Einstellungen individuell anpassbar und damit für jeden Studenten passend zugschnitten
 - Es wurden keine Kosten und Mühen gescheut um weltbeste Entwickler wie beispielsweise Senior Developer Matthias Lay ins Entwicklerteam zu holen
 
+Studenten haben ja bekanntlich ein limitiertes Budget. Wieviel wird dieses Tool kosten, damit auch Studenten dieses Angebot nutzen?
+
+Antwort:
+- Dieses Tool wird absolut kostenfrei sein, denn uns geht es nicht um Profitorientierung sondern um echte Problemlösung
+- Bei uns stehen die Studierenden im Vordergrund und deren Bedürfnisse haben höchste Priorität
+
 Sie sprechen von einer Revolution des Studierends durch Ihr Projekt. Inwiefern wird sich diese bemerkbar machen?
 
 Antwort:
